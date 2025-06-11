@@ -297,6 +297,15 @@ def get_parser(default_config_files, git_root):
     ).complete = shtab.FILE
 
     ##########
+    group = parser.add_argument_group("MCP integration")
+    group.add_argument(
+        "--mcp-config",
+        metavar="MCP_CONFIG",
+        default="mcp.yml",
+        help="Load Model Context Protocol settings from this file",
+    ).complete = shtab.FILE
+
+    ##########
     group = parser.add_argument_group("Output settings")
     group.add_argument(
         "--dark-mode",
