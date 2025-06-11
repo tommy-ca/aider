@@ -129,6 +129,7 @@ See the [installation instructions](https://aider.chat/docs/install.html) and [u
 - [Tutorial Videos](https://aider.chat/docs/usage/tutorials.html)
 - [Connecting to LLMs](https://aider.chat/docs/llms.html)
 - [Configuration Options](https://aider.chat/docs/config.html)
+- [MCP Integration](docs/MCP_INTEGRATION.md)
 - [Troubleshooting](https://aider.chat/docs/troubleshooting.html)
 - [FAQ](https://aider.chat/docs/faq.html)
 

@@ -36,6 +36,7 @@ from aider.repo import ANY_GIT_ERROR, GitRepo
 from aider.report import report_uncaught_exceptions
 from aider.versioncheck import check_version, install_from_main_branch, install_upgrade
 from aider.watch import FileWatcher
+from aider.mcp import MCPConfig
 
 from .dump import dump  # noqa: F401
 
@@ -502,6 +503,11 @@ def main(argv=None, input=None, output=None, force_git_root=None, return_coder=F
 
     # Parse again to include any arguments that might have been defined in .env
     args = parser.parse_args(argv)
+
+    if args.mcp_config:
+        args.mcp = MCPConfig(args.mcp_config)
+    else:
+        args.mcp = None
 
     if args.shell_completions:
         # Ensure parser.prog is set for shtab, though it should be by default
